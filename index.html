@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bilal Tola</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Home</a> </li>
+        <li><a href="Pages/Projects.html">Projects</a> </li>
+        <li><a href="Pages/Resume.html">Resume</a> </li>
+        <li><a href="Pages/Contact.html">Contact</a> </li>
+    </ul>
+    <h1>Welcome!</h1>
+    <img src="MyPicture.jpg" alt="MyPicture" width="500" height="400">
+    <h3>Junior majoring in Computer Science at the University of Texas at Dallas <br> 
+        Graduation: May 2021 <br>
+        <a href="https://www.linkedin.com/in/bilaltola/">Linkedin</a></h3>
+    <button onclick="factsInitializer()"> <strong>Click here to get a random fact about me!</strong> </button>
+    <p id = "toPrint"></p>
+    <script>
+        function factsInitializer()
+        {
+        var min=0; 
+        var max=12;  
+        var random = Math.floor(Math.random() * (+max - +min)) + +min;
+        document.getElementById("toPrint").innerHTML = randomFacts(random);
+        }
+        function randomFacts(random)
+        {
+            var listFacts =
+             ["I love playing ping pong", "My first programming language was C++", "favorite dish: Biryani", "favorite sport to watch: Cricket", "Favorite place on earth: home :p", "Favorite video game: Titanfall 2",
+             "I am from Karachi, Pakistan", "I love talking about games",
+             "Favorite Song: you got a friend in me", "Favorite day of the week: Saturday", "Favorite Movie: The Truman Show",
+             "Favorite TV show: The Blackadder", "Favorite super hero: Spider-Man"]
+            return listFacts[random];
+        }
+
+    </script>
+</body>
+</html>
